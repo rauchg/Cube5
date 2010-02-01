@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+  <head>
+    <title>CSS Cube</title>
+    
+    <link rel="stylesheet" href="cube5.css" type="text/css" media="screen" title="Cube5" charset="utf-8" />
+    <style type="text/css" media="screen">            
+      
+      /* Only used for this demo */
+      body {
+        padding: 0 50px;
+        font-family: "Georgia", Verdana;
+      }
+      
+      #demo-cube {
+        margin: auto;
+      }
+      
+      #demo-cuboid {
+        margin: auto;
+        height: 430px;
+      }
+      
+      #demo-cube .face {
+        background-color: rgba(0,0,0,0.05);
+        -webkit-backface-visibility: visible;
+      }
+            
+      #demo-cube .face, #demo-cuboid .face {
+        vertical-align: middle;
+        text-align: center;
+        font-family: "Lucida Grande";
+        font-size: 13px;
+        text-shadow: 0 1px 0 #fff;
+      }
+      
+      #demo-settings .face {        
+        background-color: rgba(0,0,0,0.1);
+      }
+    </style>
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/mootools/1.2.4/mootools-yui-compressed.js" type="text/javascript" charset="utf-8"></script>    
+    <script type="text/javascript" charset="utf-8">      
+      window.onload = function(){
+        var buttons = document.getElementById('cube-buttons').getElementsByTagName('button');
+        for (var i = 0, l = buttons.length; i < l; i++){
+          buttons[i].onclick = function(){
+            document.getElementById('demo-cube').getElementsByTagName('div')[0].className = 'cube to' + this.innerHTML;
+          };
+        }
+        
+        var buttons = document.getElementById('cuboid-buttons').getElementsByTagName('button');
+        for (var i = 0, l = buttons.length; i < l; i++){
+          buttons[i].onclick = function(){
+            document.getElementById('demo-cuboid').getElementsByTagName('div')[0].className = 'cube to' + this.innerHTML;
+          };
+        }
+      };      
+    </script>
+  </head>
+  <body>
+    <h1>Cube5</h1>
+    <h2>by <a href="http://devthought.com">Guillermo Rauch</a></h2>
+        
+    <hr />  
+      
+    <h2>Cube</h2>
+    <p id="cube-buttons"><button>Top</button> <button>Front</button> <button>Bottom</button> <button>Left</button> <button>Right</button> <button>Rear</button></p>
+    
+    <div class="cube-container" id="demo-cube">
+      <div class="cube toFront">      
+        <div class="face top"><h3>Top</h3></div>
+        <div class="face front"><h3>Front</h3></div>
+        <div class="face bottom"><h3>Bottom</h3></div>
+        <div class="face left"><h3>Left</h3></div>
+        <div class="face right"><h3>Right</h3></div>
+        <div class="face rear"><h3>Rear</h3></div>      
+      </div>
+    </div>
+    
+    <br /><br />
+    <hr />
+    
+    <h2>Cuboid</h2>
+    <p id="cuboid-buttons"><button>Front</button> <button>Left</button> <button>Right</button> <button>Rear</button></p>
+        
+    <div class="cube-container" id="demo-cuboid">
+      <div class="cube toFront">      
+        <div class="face top"><h3>Top</h3></div>
+        <div class="face front"><h3>Front</h3></div>
+        <div class="face bottom"><h3>Bottom</h3></div>
+        <div class="face left"><h3>Left</h3></div>
+        <div class="face right"><h3>Right</h3></div>
+        <div class="face rear"><h3>Rear</h3></div>      
+      </div>
+    </div>
+    
+  </body>
+</html>
