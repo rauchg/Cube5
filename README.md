@@ -3,6 +3,8 @@ Cube5: A CSS3 animated 3D Cube layout
 
 Cube5 is a set of CSS classes that allow you to create a 3D layout similar to that seen in certain OS X applications such as Quicksilver. The 3D effect works only on Webkit for now, but the layout is accessible for every browser.
 
+![Screenshot](http://cld.ly/8c18np)
+
 Click [here](http://screenr.com/xmd) for a screencast of the effect.
 
 How to use
